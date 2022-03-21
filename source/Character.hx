@@ -498,6 +498,22 @@ class Character extends FlxSprite
 				addOffset("singDOWN-alt", -30, -27);
 
 				playAnim('idle');
+				
+				case 'trickyMask':
+                frames = Paths.getSparrowAtlas('mfm/TrickyMask');
+                animation.addByPrefix('idle', 'Idle', 24, false);
+                animation.addByPrefix('singUP', 'Sing Up', 24, false);
+                animation.addByPrefix('singDOWN', 'Sing Down', 24, false);
+                animation.addByPrefix('singLEFT', 'Sing Left', 24, false);
+                animation.addByPrefix('singRIGHT', 'Sing Right', 24, false);
+
+                addOffset("idle", 0, -117);
+				addOffset("singUP", 93, -100);
+				addOffset("singRIGHT", 16, -164);
+				addOffset("singLEFT", 194, -95);
+				addOffset("singDOWN", 32, -168);
+
+              playAnim('idle');
 		}
 
 		dance();
